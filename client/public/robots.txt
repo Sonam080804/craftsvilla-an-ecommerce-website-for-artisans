@@ -1,0 +1,39 @@
+Alter table employee change name into employeeName 
+
+
+
+id , name , dept , salary  
+
+
+select dept , sum(salary) as Total Salary 
+from Employee 
+group by dept ;
+
+
+select dept , max(salary) as SecondHighest
+from employee
+where ( dept , salary ) not in 
+( select dept , max(salary) 
+from employee 
+group by dept )
+group by dept ;
+
+
+
+
+struct Node{
+   int val ;
+   Node* next ;
+   Node(int x){
+     next = NULL ;
+     val = x ;
+   }
+};
+
+
+Node* list = new Node(12) ;
+
+list->next = new Node(8) ;
+
+
+
